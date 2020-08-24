@@ -10,12 +10,17 @@ $(function () {
       </tr>`
         );
       } else {
-        $(`#${data.parentId}`).append( 
-            `<tr id="${data.id}" class="${data.isActive ? "active" : "unactive"}">
+        $(`#${data.parentId}`)
+          .addClass("parent")
+          .after(
+            `<tr id="${data.id}" class="child ${data.parentId} ${
+              data.isActive ? "active" : "unactive"
+            }">
                 <td>${data.name}</td>
                 <td>${data.balance}</td>       
                 <td>${data.email}</td>
-            </tr>`);
+            </tr>`
+          );
       }
     });
 
@@ -42,6 +47,11 @@ $(function () {
       $(".unactive").each(function () {
         $(this).show();
       });
+    });
+
+    $(".parent").on("click", function () {
+      const check = $(this).attr("id");
+      $('.'+check).show();
     });
   });
 });

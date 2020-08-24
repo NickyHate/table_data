@@ -1,3 +1,30 @@
-td{
-    text-align: center;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+button {
+    margin: 10px 20px;
+}
+td {
+  text-align: center;
+  padding: 10px 20px;
+  border: 1px solid black;
+}
+tr{
+  cursor: pointer;
+}
+.child {
+  display: none;
+}
+.show {
+  display: table-cell;
 }
