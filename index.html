@@ -4,17 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="script.js"></script>
   </head>
   <body>
-    <button class="sort" type="submit">Сортировать</button>
+    <button class="sort-active" type="button">Показать активных</button>
+    <button class="sort-unactive" type="button">Показать неактивных</button>
+    <button class="unsort" type="button">Показать всех</button>
     <table id="example" class="display" style="width: 100%;">
       <thead class="new-table">
-        <tr>
-          <th>Имя</th>
-          <th>Баланс</th>
-          <th>Почта</th>
+        <tr class="main">
+          <th class="main-title">Имя</th>
+          <th class="main-title">Баланс</th>
+          <th class="main-title">Почта</th>
         </tr>
       </thead>
     </table>
